@@ -1,4 +1,4 @@
-  // Inicializamos la funcion contraseñaSegura la cual nos va a servir para filtrar todos los requisitos para que la constraseña sea segura.
+// Inicializamos la funcion contraseñaSegura la cual nos va a servir para filtrar todos los requisitos para que la constraseña sea segura.
 function contraseñaSegura(contraseña) {
 
   // Este if sirve para asegurarse de que la contraseña tenga una longitus entre 8 i 20
@@ -47,7 +47,7 @@ function contraseñaSegura(contraseña) {
   return "Felicidades!! Ahora, tu contraseña es segura.";
 }
 
- // inicializamos la funcion que se lanzará cuando pulsemos el boton de "Verificar Contraseña" y lanzara todo el codigo anterior.
+// inicializamos la funcion que se lanzará cuando pulsemos el boton de "Verificar Contraseña" y lanzara todo el codigo anterior.
 
 function verificarContraseña() {
   const contraseña = document.getElementById("password").value;
