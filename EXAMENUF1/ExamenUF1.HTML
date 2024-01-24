@@ -180,6 +180,11 @@
     }
         //Problema1
 
+        /**
+         * En esta funcion lo que hacemos escoger las letras que se hallan en la posicion par del array cadena, y después añadirlas a un array vacio el cual acabaremos mostrando
+         * como return. Para ello utilizamos el MOD de 2 y lo igualamos a 1 para escoger las posiciones pares hasta que la iteracion sea menor que la longitud de la cadena 
+         * almacenada en el primer elemento del array cadena. 
+         */
 
         const cadena=["abcdefghijkl"];
         const cadenaVacia=[];
@@ -193,7 +198,7 @@
         function posicionesPares(cadena) {         
 
             for (let i = 0; i < cadena[0].length; i++) {
-                if (i % 2 === 1) { 
+                if (i % 2 == 1) { 
                 cadenaVacia.push(cadena[0][i]);
                 }
             }                
