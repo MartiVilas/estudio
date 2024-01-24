@@ -172,24 +172,32 @@
 
     function init(){
 
-
-        console.log("la cadena base es "+cadena)
-        console.log("cadena vacia "+cadenaVacia);
+        console.log("la cadena base es "+ cadena[0].split(" "))
+        console.log("cadena vacia "+ cadenaVacia);
         const problema1=posicionesPares(cadena);
-        console.log("la solucion del problema 1 es "+problema1);
+        console.log("la solucion del problema 1 es "+ "[ "+ problema1 +" ]" );
         
     }
         //Problema1
+
+
         const cadena=["abcdefghijkl"];
         const cadenaVacia=[];
 
-        function posicionesPares(cadena) {
-            for (let i = 0; i <= cadena.length; i++) {
-                if(cadena[i]%2==0){
-                    cadenaVacia.push(cadena[0][i]); 
+        let contenedor= document.getElementById("problema1")
+        let p= document.createElement("p")
+        contenedor.appendChild(p)
+        p.textContent=posicionesPares(cadena)
+        p.setAttribute("class", "result")
+
+        function posicionesPares(cadena) {         
+
+            for (let i = 0; i < cadena[0].length; i++) {
+                if (i % 2 === 1) { 
+                cadenaVacia.push(cadena[0][i]);
                 }
-            }  
-            return cadenaVacia.join('');
+            }                
+            return cadenaVacia.join(", ");
         }
            
         
