@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="init()">
+    <script>
+      let num1, num2;
+      function init() {
+        let num1 = pedirNumero();
+        let num2 = pedirNumero();
+        numMayor(); // Llamada a la función numMayor después de pedir los números
+        multiplicacionSinAsterisco(num1, num2);
+      }
+
+      function pedirNumero() {
+        let numUser;
+        do {
+          numUser = prompt("Dime tu número");
+        } while (isNaN(numUser)); // Corregir la condición para verificar si numUser es NaN
+        return numUser;
+      }
+
+      function numMayor() {
+        if (!isNaN(num1) && !isNaN(num2)) {
+          if (num1 > num2) {
+            console.log("1. El número más grande es el numero: " + num1);
+          } else if (num1 < num2) {
+            console.log("2. El número más grande es el número:  " + num2);
+          } else {
+            console.error("Ingresa número válido");
+          }
+        }
+      }
+
+      function multiplicacionSinAsterisco(num1, num2) {
+        let resultado = 0;
+        console.log("num1",num1);
+        console.log("num2",num2);
+        for (let i = 0; i < num2; i++) {
+          resultado += num1;
+        }
+        console.log("El resultado es " + resultado);
+        return resultado;
+      }
+    </script>
+  </body>
+</html>

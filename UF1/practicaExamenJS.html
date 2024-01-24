@@ -1,0 +1,81 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+
+    <script>
+
+        const arrayNums = [2, 1, 3, 5, 3, 2]
+
+        function init() {
+        
+            console.log("El primer número que se repite es " + findFirstRepeated());
+
+            console.log("Las palabras que puedes hacer son " + letrasDesordenadas(gifts, materials));
+
+            let diferencia=encuentraDiferencia(original,modified)
+            console.log("La diferencia es "+encuentraDiferencia(original,modified));
+
+        }
+
+        function findFirstRepeated() {
+            const numRepetido = [];
+            for (let i = 0; i < arrayNums.length; i++) {
+
+                if (numRepetido.includes(arrayNums[i])) {
+                    return arrayNums[i]
+                } else numRepetido.push(arrayNums[i]);
+
+            }
+            return numRepetido
+        }
+
+        const gifts = ['tren', 'oso', 'pelota']
+        const materials = 'tronesa'
+
+        function letrasDesordenadas(gifts, materials) {
+            const letrasCoincidentes = []
+            for (let i = 0; i < gifts.length; i++) {
+                let contador = 0
+                
+                for (let j = 0; j < gifts[i].length; j++) {
+                    if (materials.includes(gifts[i][j])) {
+                        contador++
+                    }
+                }
+
+                if (contador == gifts[i].length) {
+                   
+                    letrasCoincidentes.push(gifts[i])
+                }
+            }
+            return letrasCoincidentes
+
+        }
+        
+        const original = 'abcd'
+        const modified = 'abcde2'
+
+      function encuentraDiferencia(original, modified) {
+        for (let i=0; i<original.length; i++){
+            if(original[i] !== modified[i]){
+                return original[i]
+            }
+            
+        } 
+        if(modified.length>original.length){
+                return modified[modified.length-1]
+            }
+            return ''
+            
+      }
+    
+    </script>
+
+</body>

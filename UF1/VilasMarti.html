@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de Contraseña</title>
+</head>
+<body onload="verificarContraseña">
+
+  <h1>Verificador de Contraseña</h1>
+
+  <label for="password">Ingrese su contraseña:</label>
+  <input type="password" id="password" placeholder="Ingrese su contraseña">  
+  <button onclick="verificarContraseña()">Verificar Contraseña</button>
+  <h2>Condiciones para contraseña segura</h2>
+  <p>
+    <ol>
+        <li> Tiene un mínimo de 8 caracteres y un máximo de 20.</li>
+        <li> Debe incluir letras y números, concretamente: mínimo dos minúsculas una mayúscula y un dígito.</li>
+        <li> No puede contener tres o más caracteres iguales seguidos: “aaa” no es aceptado, pero “a.a.a” sí.</li>
+        <li> No debe tener espacios en blanco.</li>
+    </ol>
+  </p> 
+  
+  <p id="resultado"> </p>
+  <div id="contraseñaMostrada">  </div>
+  
+  <script src="./VilasMarti.js">
+
+    function contraseñaSegura(contraseña) {
+      // Código de JS de VilasMarti.js.
+    }
+  </script>  
+
+</body>
+</html>

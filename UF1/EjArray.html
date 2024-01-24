@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+    <title>Ejercicio 7 - Ejercicios</title>
+</head>
+<body onload="init();">
+    <h1 id="titulo"> </h1>
+    <div id="contenedor"></div>
+
+
+    <script>
+
+        function init() {
+            let ej1 = array1([2,4,5,6,7,8,3,1,10,4]);
+            console.log(ej1)
+            let ej2 = array2(["Rodriguez", "8", 9, '5',4, 'Clara']), hacermedia
+            console.log(ej2, hacermedia)
+        }
+   
+        function array1(arr1){
+            let total = 0
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i]%2==0){
+                    total+=arr1[i]              
+                }                
+            }
+            return total
+        }
+
+        function array2(arr2){
+            let ultimoElemento = arr2.pop()
+            arr2.unshift(ultimoElemento)
+            return arr2
+        }
+
+        function hacermedia(arr2){
+            let media = 0
+            let suma=0
+            for (let i = 0; i < arr2.length; i++) {
+                if (isNaN(arr2[i])) {
+                    media+=parseInt(arr2[i])
+                    suma++
+                }
+            }
+            media/=suma
+            arr2.push(media)           
+            return arr2
+        }
+
+    </script>
+
+</body>

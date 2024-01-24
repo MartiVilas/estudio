@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+    <title>Ejercicio 6 - Concat</title>
+</head>
+<body onload="init();">
+    <h1 id="titulo"> </h1>
+    <div id="contenedor"></div>
+
+
+    <script>
+
+        function init(){
+            const personaje = Array("Rampart", "Vantage", "Lifline")
+            const arma = Array("Peacekeeper", "Sentinel")
+            const equip =("Pilas", "Disruptor")
+            const array=concat(concat(personaje,arma,equip))
+            console.log(array)
+        }
+
+        function concat(a1, a2){
+            const a = a1
+            for (let i = 0; i < a2.length; i++) {
+                a.push(a2[i]);        
+            }
+            return a
+        }
+
+    </script>
+
+</body>
