@@ -171,20 +171,25 @@
 
 
     function init(){
-        console.log(posicionesPares("abcdefghijkl"));
 
+
+        console.log("la cadena base es "+cadena)
+        console.log("cadena vacia "+cadenaVacia);
+        const problema1=posicionesPares(cadena);
+        console.log("la solucion del problema 1 es "+problema1);
+        
     }
-
         //Problema1
+        const cadena=["abcdefghijkl"];
+        const cadenaVacia=[];
+
         function posicionesPares(cadena) {
-            const cadenaVacia=[]
-            for (let i = 1; i <= cadena.lenght; i++) {
-                if(i%2==0){
-                    cadenaVacia+=cadena[i]
-                    cadena[i].shift()
+            for (let i = 0; i <= cadena.length; i++) {
+                if(cadena[i]%2==0){
+                    cadenaVacia.push(cadena[0][i]); 
                 }
             }  
-            return cadenaVacia 
+            return cadenaVacia.join('');
         }
            
         
