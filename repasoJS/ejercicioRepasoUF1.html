@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      li{
+        font-size: 1rem;
+      }
+
+      .result{
+        color:rgb(135, 101, 255);
+      }
+
+    </style>
   </head>
   <body onload="init()">
     <header>
@@ -16,21 +35,21 @@
           <section>
             <h2>Todos</h2>
             <ol>
-              <div id="todos1"> 
+              <div class="todos1" id="todos1">
                 <li>
                   Función que recibe un array y que comprueba si todos los
-                  elementos de una array son de tipo String. Si es que sí devuelve
-                  true en caso contrario false
+                  elementos de una array son de tipo String. Si es que sí
+                  devuelve true en caso contrario false
                 </li>
               </div>
               <div id="todos2">
                 <li>
                   Función que recibe un array y que comprueba que todos los
-                  elementos de una array son pares. Si es que sí devuelve true en
-                  caso contrario false
+                  elementos de una array son pares. Si es que sí devuelve true
+                  en caso contrario false
                 </li>
               </div>
-              </ol>
+            </ol>
           </section>
         </div>
 
@@ -138,79 +157,81 @@
 
       function init() {
         console.log(compruebaString(arrayStrings));
-        console.log(compruebaPares(arrayInt2))
+        console.log(compruebaPares(arrayInt2));
       }
 
       /**
        * Bateria de constantes de las funciones que hay a continuacion
-      */
+       */
 
-      const arrayStrings = [" Hola ", " Futbol "," Sawa ", " Iglesia "];
-      const arrayStrings2 = [" Hola ", 12 , " Sawa ", 45];
-      const arrayInt = [2, 4, 6, 8, 12]
-      const arrayInt2 = [2, 3, 4, 5, 6]
+      const arrayStrings = [" Hola ", " Futbol ", " Sawa ", " Iglesia "];
+      const arrayStrings2 = [" Hola ", 12, " Sawa ", 45];
+      const arrayInt = [2, 4, 6, 8, 12];
+      const arrayInt2 = [2, 3, 4, 5, 6];
 
       /**
        * funcnion que comprueba que dentro del array solo haya strings
        * @author Marti Vilas
-      */
+       */
 
       function compruebaString(array) {
-        for (let i =0; i < array.length; i++) {
+        for (let i = 0; i < array.length; i++) {
           if (isNaN(array[i]) == false) {
-            return "El array "+array.join(", ")+" es completamente Strings "+ false;
+            return (
+              "El array " + array.join(", ") + " es completamente Strings " + false);
           }
         }
-        return "El array "+array.join(", ")+ " es completamente Strings "+true;
+        return ( "El array " + array.join(", ") + " es completamente Strings " + true );
       }
 
       /**
-       * Creador de un elemento HTML que lo incluye dentro del div todos1 
-      */ 
-      let contenedor= document.getElementById("todos1")
-        let p= document.createElement("p")
-        contenedor.appendChild(p)
-        p.textContent=compruebaString(arrayStrings)
+       * Creador de un elemento HTML que lo incluye dentro del div todos1
+       */
+      let contenedor = document.getElementById("todos1");
+      let p = document.createElement("p");
+      contenedor.appendChild(p);
+      p.textContent = compruebaString(arrayStrings);
+      p.setAttribute("class", "result")
       /**
        * Creador de un elemento HTML que lo incluye dentro del div todos1
-      */ 
-        let contenedorString= document.getElementById("todos1")
-        let pString = document.createElement("p")
-        contenedorString.appendChild(pString)
-        pString.textContent=compruebaString(arrayStrings2)
-
+       */
+      let contenedorString = document.getElementById("todos1");
+      let pString = document.createElement("p");
+      contenedorString.appendChild(pString);
+      pString.textContent = compruebaString(arrayStrings2);
+      pString.setAttribute("class", "result")
 
       /**
        * funcion que comprueba que dentro el array solo haya numeros pares
        * @author Marti Vilas
-      */
+       */
 
-      function compruebaPares(array){
-        for (let i =0; i < array.length; i++) {
-          if ((array[i])%2 != 0) {
-            return "El array "+array.join(", ")+" es completamente pares "+false;
+      function compruebaPares(array) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] % 2 != 0) {
+            return (
+              "El array " + array.join(", ") + " es completamente pares " + false );
           }
         }
-        return "El array "+array.join(", ")+ " es completamente pares "+true;
+        return ( "El array " + array.join(", ") + " es completamente pares " + true);
       }
 
-            /**
-       * Creador de un elemento HTML que lo incluye dentro del div todos1 
-      */ 
-      let contenedor2= document.getElementById("todos2")
-        let p2= document.createElement("p")
-        contenedor2.appendChild(p2)
-        p2.textContent=compruebaPares(arrayInt)
       /**
        * Creador de un elemento HTML que lo incluye dentro del div todos1
-      */ 
-        let contenedorInt= document.getElementById("todos2")
-        let pInt = document.createElement("p")
-        contenedorInt.appendChild(pInt)
-        pInt.textContent=compruebaPares(arrayInt2)
-
-
-
+       */
+      let contenedor2 = document.getElementById("todos2");
+      let p2 = document.createElement("p");
+      contenedor2.appendChild(p2);
+      p2.textContent = compruebaPares(arrayInt);
+      p2.setAttribute("class", "result")
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div todos1
+       */
+      let contenedorInt = document.getElementById("todos2");
+      let pInt = document.createElement("p");
+      contenedorInt.appendChild(pInt);
+      pInt.textContent = compruebaPares(arrayInt2);
+      pInt.setAttribute("class", "result")
     </script>
   </body>
 </html>
