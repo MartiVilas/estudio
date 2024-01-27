@@ -168,7 +168,8 @@
         console.log(compruebaPares(arrayInt2));
         console.log(alMenosUnoLongitud(alMenosUno));
         console.log(alMenosUnNumPar(alMenosUnoPar));
-        console.log(transformaElArray(transforma2))
+        console.log(transformaElArray(transforma2));
+        console.log(multiplicacion(mult,2));
         
       }
 
@@ -190,6 +191,9 @@
 
       const transforma = ["Hola", "Futbol", "Sawa", "Iglesia"]
       const transforma2 = ["Baloncesto", "Luka", "Naruto", "Prado"]
+
+      const mult = [2, 4, 6, 8]
+      const mult2 = [1, 2, 3, 4]
 
       /**
        * funcnion que comprueba que dentro del array solo haya strings
@@ -346,6 +350,9 @@
       pAlMenosUnNumPar.setAttribute("class", "result");
 
 
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div tranforma1
+      */
 
       function transformaElArray(array){
         let arrayVacio=[]
@@ -361,7 +368,10 @@
       p5.textContent=transformaElArray(transforma)
       p5.setAttribute("class", "result")
 
-
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div tranforma1
+      */
+     
       let contenedorTranformaArray=document.getElementById("transforma1")
       let pTransformaArray = document.createElement("p");
       contenedorTranformaArray.appendChild(pTransformaArray)
@@ -369,6 +379,38 @@
       pTransformaArray.setAttribute("class", "result")
 
 
+      /**
+       * funcion que multiplica los numeros del array pasado por parametro, por el numero pasado por parametro
+       */ 
+
+
+        function multiplicacion(array, numMult){
+          let arrayVacio=[]
+            for (let i = 0; i < array.length; i++) {
+              arrayVacio.push(array[i]*numMult)
+            }
+            return ("Los numeros del array "+array.join(", ")+" multicplicados por "+ numMult+" dan "+arrayVacio.join(", "));
+        }
+
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div tranforma2
+      */
+
+      let contenedor6=document.getElementById("transforma2")
+      let p6 = document.createElement("p");
+      contenedor6.appendChild(p6)
+      p6.textContent=multiplicacion(mult,2)
+      p6.setAttribute("class", "result")
+      
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div tranforma2
+      */
+
+      let contenedorMulti=document.getElementById("transforma2")
+      let pMulti = document.createElement("p");
+      contenedorMulti.appendChild(pMulti)
+      pMulti.textContent=multiplicacion(mult2,3)
+      pMulti.setAttribute("class", "result")
 
 
 
