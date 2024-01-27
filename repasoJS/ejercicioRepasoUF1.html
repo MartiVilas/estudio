@@ -35,7 +35,7 @@
           <section>
             <h2>Todos</h2>
             <ol>
-              <div class="todos1" id="todos1">
+              <div id="todos1">
                 <li>
                   Función que recibe un array y que comprueba si todos los
                   elementos de una array son de tipo String. Si es que sí
@@ -57,16 +57,20 @@
           <section>
             <h2>Al menos uno</h2>
             <ol start="3">
-              <li>
-                Función que recibe un array y que comprueba si al menos un
-                elemento del array tiene una longitud mayor que dos. Si es que
-                sí devuelve true en caso contrario false
-              </li>
-              <li>
-                Función que recibe un array y que comprueba si al menos un
-                número es par. Si es que sí devuelve true en caso contrario
-                false
-              </li>
+              <div id="alMenosUno1"> 
+                <li>
+                  Función que recibe un array y que comprueba si al menos un
+                  elemento del array tiene una longitud mayor que dos. Si es que
+                  sí devuelve true en caso contrario false
+                </li>
+              </div>
+              <div id="alMenosUno2"> 
+                <li>
+                  Función que recibe un array y que comprueba si al menos un
+                  número es par. Si es que sí devuelve true en caso contrario
+                  false
+                </li>
+              </div>
             </ol>
           </section>
         </div>
@@ -158,6 +162,7 @@
       function init() {
         console.log(compruebaString(arrayStrings));
         console.log(compruebaPares(arrayInt2));
+        console.log(alMenosUnoLongitud(alMenosUno));
       }
 
       /**
@@ -168,6 +173,8 @@
       const arrayStrings2 = [" Hola ", 12, " Sawa ", 45];
       const arrayInt = [2, 4, 6, 8, 12];
       const arrayInt2 = [2, 3, 4, 5, 6];
+      const alMenosUno = ["E","JOE", "B", "C "]
+      const alMenosUno2=["E","O", "B", "C "]
 
       /**
        * funcnion que comprueba que dentro del array solo haya strings
@@ -232,6 +239,43 @@
       contenedorInt.appendChild(pInt);
       pInt.textContent = compruebaPares(arrayInt2);
       pInt.setAttribute("class", "result")
+      
+            
+      /**
+       * Funcion que compureba que dentro del array haya al menos una posicion que sea de mas de 2 caracteres
+       * @authorn Marti Vilas
+      */ 
+
+      function alMenosUnoLongitud(array){
+        for (let i = 0; i < array.length; i++) {
+              if (array[i].length>2) {
+                return ("Al menos un elemento  del "+array.join(", ")+ " tiene una longitud mayor que 2 "+true); 
+            }
+        }
+        return ("Al menos un elemento  del "+array.join(", ")+ " tiene una longitud mayor que 2 "+false);
+      }
+
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div alMenosUno1
+       */
+       let contenedor3= document.getElementById("alMenosUno1");
+      let p3 = document.createElement("p");
+      contenedor3.appendChild(p3);
+      p3.textContent = compruebaPares(alMenosUno);
+      p3.setAttribute("class", "result")
+
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div alMenosUno1
+      */
+
+      let contenedorAlMenosUno = document.getElementById("alMenosUno1");
+      let pAlMenosUno= document.createElement("p");
+      contenedorAlMenosUno.appendChild(pAlMenosUno);
+      pAlMenosUno.textContent = compruebaPares(alMenosUno2);
+      pAlMenosUno.setAttribute("class", "result")
+
+
+      
     </script>
   </body>
 </html>
