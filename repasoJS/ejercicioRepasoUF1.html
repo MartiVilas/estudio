@@ -195,7 +195,7 @@
       const mult = [2, 4, 6, 8]
       const mult2 = [1, 2, 3, 4]
 
-      /**
+      /** ej1
        * funcnion que comprueba que dentro del array solo haya strings
        * @author Marti Vilas
        */
@@ -233,7 +233,7 @@
       pString.textContent = compruebaString(arrayStrings2);
       pString.setAttribute("class", "result");
 
-      /**
+      /** ej2
        * funcion que comprueba que dentro el array solo haya numeros pares
        * @author Marti Vilas
        */
@@ -271,7 +271,7 @@
       pInt.textContent = compruebaPares(arrayInt2);
       pInt.setAttribute("class", "result");
 
-      /**
+      /** ej3
        * Funcion que compureba que dentro del array haya al menos una posicion que sea de mas de 2 caracteres
        * @authorn Marti Vilas
        */
@@ -314,11 +314,11 @@
       pAlMenosUno.textContent = alMenosUnoLongitud(alMenosUno2);
       pAlMenosUno.setAttribute("class", "result");
 
-      /**
+
+      /** ej4
        *Funcion que comprueba que al menos uno de los numeros del array sea par
        @author Marti Vilas
       */
-
 
       function alMenosUnNumPar(array) {
         for (let i = 0; i < array.length; i++) {
@@ -332,7 +332,6 @@
       /**
        * Creador de un elemento HTML que lo incluye dentro del div alMenosUno2
        */
-
       let contenedor4 = document.getElementById("alMenosUno2");
       let p4 = document.createElement("p");
       contenedor4.appendChild(p4);
@@ -342,7 +341,6 @@
       /**
        * Creador de un elemento HTML que lo incluye dentro del div alMenosUno2
       */
-
       let contenedorAlMenosUnNumPar = document.getElementById("alMenosUno2");
       let pAlMenosUnNumPar = document.createElement("p");
       contenedorAlMenosUnNumPar.appendChild(pAlMenosUnNumPar);
@@ -350,7 +348,7 @@
       pAlMenosUnNumPar.setAttribute("class", "result");
 
 
-      /**
+      /** ej5
        * Creador de un elemento HTML que lo incluye dentro del div tranforma1
       */
 
@@ -361,7 +359,9 @@
         }
         return ("El numero de caracteres de las posiciones del array "+array.join(", ")+" es igual a "+arrayVacio.join(", "));
       }
-
+      /**
+       * Creador de un elemento HTML que lo incluye dentro del div tranforma1
+      */
       let contenedor5=document.getElementById("transforma1")
       let p5 = document.createElement("p");
       contenedor5.appendChild(p5)
@@ -371,7 +371,6 @@
       /**
        * Creador de un elemento HTML que lo incluye dentro del div tranforma1
       */
-     
       let contenedorTranformaArray=document.getElementById("transforma1")
       let pTransformaArray = document.createElement("p");
       contenedorTranformaArray.appendChild(pTransformaArray)
@@ -379,10 +378,9 @@
       pTransformaArray.setAttribute("class", "result")
 
 
-      /**
+      /** ej6
        * funcion que multiplica los numeros del array pasado por parametro, por el numero pasado por parametro
        */ 
-
 
         function multiplicacion(array, numMult){
           let arrayVacio=[]
@@ -395,7 +393,6 @@
       /**
        * Creador de un elemento HTML que lo incluye dentro del div tranforma2
       */
-
       let contenedor6=document.getElementById("transforma2")
       let p6 = document.createElement("p");
       contenedor6.appendChild(p6)
@@ -405,7 +402,6 @@
       /**
        * Creador de un elemento HTML que lo incluye dentro del div tranforma2
       */
-
       let contenedorMulti=document.getElementById("transforma2")
       let pMulti = document.createElement("p");
       contenedorMulti.appendChild(pMulti)
@@ -413,10 +409,10 @@
       pMulti.setAttribute("class", "result")
 
 
-
-
-
-
+      /** ej7
+       * funcion que recibe un array por parametro y devuelvo solo los elementos que empiezen por Z
+       */ 
+      
     </script>
   </body>
 </html>
