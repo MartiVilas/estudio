@@ -11,6 +11,9 @@ function init() {
   console.log(tamañoSuperiorOIgualA5(superiorA5));
   console.log(ultimoElementoPorP(superiorA5));
   console.log(primerElementoT(palabraPorP));
+  console.log(ultimoElementoPar(arrayInt2));
+  console.log(sumaElementos(arrayInt));
+  console.log(restaElementosTotal(restaElementos));
 
   añadirResultAlDOM("todos1", compruebaString(arrayStrings));
   añadirResultAlDOM("todos1", compruebaString(arrayStrings2));
@@ -44,6 +47,15 @@ function init() {
 
   añadirResultAlDOM("busca3", primerElementoT(palabraPorT));
   añadirResultAlDOM("busca3", primerElementoT(palabraPorT2));
+
+  añadirResultAlDOM("busca4", ultimoElementoPar(arrayInt));
+  añadirResultAlDOM("busca4", ultimoElementoPar(arrayInt2));
+
+  añadirResultAlDOM("acumula1", sumaElementos(arrayInt));
+  añadirResultAlDOM("acumula1", sumaElementos(arrayInt2));
+
+  añadirResultAlDOM("acumula2", restaElementosTotal(restaElementos));
+  añadirResultAlDOM("acumula2", restaElementosTotal(restaElementos2));
 }
 
 /**
@@ -81,7 +93,10 @@ const palabraPorP = ["Pablo", "Pedro", "Martí", "Padre"];
 const palabraPorP2 = ["Pasta", "Cocacola", "Pesto", "Ingenieria Aeronautica"];
 
 const palabraPorT = ["Pablo","Trincao","Pesto","Xavi"];
-const palabraPorT2 = ["Carlos","Teta","Ulises","Tonto"]
+const palabraPorT2 = ["Carlos","Teta","Ulises","Tonto"];
+
+const restaElementos = [12, 3, 4, 5]; //resultado 0
+const restaElementos2 = [9, 3, 3]; // resultado 3
 
 /**
  * Funcion que printa en el html lo que le pases por parametro
@@ -304,4 +319,44 @@ function primerElementoT(array){
       }
     }
     return "Ninguna palabra en el array "+array.join(", ")+" tiene una palabra que empeiza por 'T'"
+}
+
+
+/**
+ * funcion que devuelve el ultimo elemento que sea par del array seleccionado.
+ */
+
+function ultimoElementoPar(array){
+  let elementoPar;
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]%2==0){
+          elementoPar=array[i]
+        }
+    }
+
+    return "El ultimo elemento que es par en el "+"[ "+array.join(", ")+"]"+" es el elemento: "+ elementoPar
+}
+
+
+/**
+ *  funcion que suma todos los elementos del array pasado por parametro
+ * @author Marti Vilas
+ */
+
+function sumaElementos(array){
+  let acumulado=0;
+  for (let i = 0; i < array.length; i++) {
+    acumulado+=array[i]       
+  }
+  return "El total de la suma del array "+array.join(", ")+" es de: "+ acumulado
+}
+
+
+function restaElementosTotal(array){
+  
+  let acumulado=0
+  for (let i = 0; i < array.length; i++) {
+      acumulado-=array[i]
+  }
+  return "El total de la resta del array "+array.join(", ")+" es de: "+ acumulado
 }
