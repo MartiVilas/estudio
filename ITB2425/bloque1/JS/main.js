@@ -68,7 +68,25 @@ for (let i = 1; i <= numUsuario; i++) {
 
 */
 
-
+/*
 for (let i = 0; 1 <= numUsuario; i++){
     console.log("*" * i);
+}
+  */
+
+
+let randome = Math.floor(Math.random() * 101);
+
+console.log(randome)
+for (let i = 5; i > 0; i--) {
+  if(numUsuario > randome){ 
+  alert("El número randome está por debajo");
+  numUsuario = prompt("Parece que no era ese prueba con otro: ");
+} else if(numUsuario < randome){
+  alert("El numero esta por encima");
+  numUsuario = prompt("Parece que no era ese prueba con otro: "); 
+}else if (numUsuario == randome){
+  console.log("Exacto el numero era " + numUsuario + "!")
+}
+  console.log(`Te quedan ${i} intentos`)
 }
