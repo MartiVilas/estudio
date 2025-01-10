@@ -18,4 +18,3 @@ console.log(boton.getAttribute("class"));
 console.log(boton.getAttribute("id"));
 
 
-
