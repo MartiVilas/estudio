@@ -53,7 +53,8 @@ for (let i = 0; i <= 10; i++){
 */
 
 let nota = 10
-nota <=  5? console.log("suspendido"):console.log("aprobado")
+nota <=  5 ? console.log("suspendido"):console.log("aprobado")
+
 /*
 for (let i = 0; i < numUsuario; i++) {
   console.log((total += i));
@@ -72,21 +73,35 @@ for (let i = 1; i <= numUsuario; i++) {
 for (let i = 0; 1 <= numUsuario; i++){
     console.log("*" * i);
 }
-  */
+*/
+
 
 
 let randome = Math.floor(Math.random() * 101);
+let numUsuario = prompt("Dime que número ") 
 
 console.log(randome)
 for (let i = 5; i > 0; i--) {
-  if(numUsuario > randome){ 
-  alert("El número randome está por debajo");
-  numUsuario = prompt("Parece que no era ese prueba con otro: ");
-} else if(numUsuario < randome){
-  alert("El numero esta por encima");
-  numUsuario = prompt("Parece que no era ese prueba con otro: "); 
-}else if (numUsuario == randome){
-  console.log("Exacto el numero era " + numUsuario + "!")
+
+    if(numUsuario > randome){ 
+    alert("El número randome está por debajo");
+    numUsuario = prompt("Parece que no era ese prueba con otro: ");
+    console.log(`Te quedan ${i} intentos`)
+
+  } else if(numUsuario < randome){
+    alert("El numero esta por encima");
+    numUsuario = prompt("Parece que no era ese prueba con otro: "); 
+    console.log(`Te quedan ${i} intentos`)    
+
+  }else if (i>=0){
+    console.log("Te has quedado sin intentos :(")
+
+  }else if(numUsuario == randome){
+
+    console.log("Exacto el numero era " + numUsuario + "!")
+
+
+  }  
 }
-  console.log(`Te quedan ${i} intentos`)
-}
+
+
