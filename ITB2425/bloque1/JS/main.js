@@ -104,4 +104,18 @@ for (let i = 5; i > 0; i--) {
   }  
 }
 
+ for (let i = 2; i < numUsuario; i++) {
+  if (numero % i === 0) {
+      esPrimo = false;
+      break;
+  }
+}
 
+
+if (esPrimo) {
+  resultado.textContent = `¡${numUsuario} es un número primo! 🎉`;
+  resultado.style.color = "green";
+} else {
+  resultado.textContent = `No, ${numUsuario} no es un número primo. ❌`;
+  resultado.style.color = "red";
+}
