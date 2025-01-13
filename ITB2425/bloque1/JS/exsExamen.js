@@ -23,7 +23,9 @@ pDiv.textContent = "Este es un parrafo añadido";
 div.appendChild(pDiv);
 
 /*Ejercicio 4*/
-
 let textoRojo = document.getElementById("titulo");
 textoRojo.style.color = "red";
-textoRojo.style.fontSize = 32;
+textoRojo.style.fontSize = "36px";
+
+
+/*Ejercicio 5*/
