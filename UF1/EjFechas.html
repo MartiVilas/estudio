@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
     <title>Ejercicio 5 - Fechas</title>
-</head>
-<body onload="init()">
+  </head>
+  <body onload="init()">
     <h1 id="titulo">Ejercicio 5 - Fechas</h1>
     <div id="contenedor"></div>
 
-
     <script>
+      function init() {
+        let ex1 = getDate();
+      }
 
-        function init(){
-            let ex1 = getDate();
-            
-        }
-
-        function getDate(){
+      function getDate() {
         let fecha = new Date();
         console.log(fecha);
         let p1 = document.createElement("p");
@@ -29,14 +23,9 @@
         let div = document.getElementById("contenedor");
         div.appendChild(p1);
         return p1;
-        }
+      }
 
-        function getClass(){
-            
-
-        }
-
-
+      function getClass() {}
     </script>
-
-</body>
+  </body>
+</html>
