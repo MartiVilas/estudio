@@ -54,10 +54,6 @@ div {
   .par {
     background-color: gold;
   }
-  .par:hover{
-    background-image:url(../CSS/par.jpeg);
-
-  }
 
   .impar {
     background-color: coral;

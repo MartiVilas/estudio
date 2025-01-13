@@ -28,4 +28,3 @@ textoRojo.style.color = "red";
 textoRojo.style.fontSize = "36px";
 
 
-/*Ejercicio 5*/

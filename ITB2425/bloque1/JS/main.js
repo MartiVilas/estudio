@@ -133,7 +133,6 @@ if (numUsuario>30){
 let div = document.getElementById("contenedor");
 
 // Creamos un bucle para que del 1 al numero que nos de el usuario cree el número que le toque
-
 // y que lo añada a  al div contenedor para que se muestre por el html.
 for (let num = 1; num <= numUsuario.valueOf(numUsuario); num++) {
 
@@ -160,3 +159,5 @@ for (let num = 1; num <= numUsuario.valueOf(numUsuario); num++) {
   // Y despues añadimos dicho cuadro al div contenedor el cuadro que contiene el número.
   div.appendChild(cuadro);
 }
+
+/*⌫*/
