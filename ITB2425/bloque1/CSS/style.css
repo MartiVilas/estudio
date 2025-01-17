@@ -1,60 +1,62 @@
-.highlight{
-    color: red;
-
+/* Contenedor principal para letras y números */
+#contenedores {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los dos contenedores */
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho total del contenedor */
+    margin: auto; /* Centrar en la pantalla */
 }
 
-div {
+/* Contenedor de letras */
+#contenedorLetra {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    width: 65%; /* Ocupa un 65% del ancho disponible */
+    padding: 10px;
+}
 
-  p {
+/* Contenedor de números: Cambiado a grid */
+#contenedorNum {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crear 3 columnas iguales */
+    gap: 10px; /* Espaciado entre las celdas */
+    width: 30%; /* Ocupa un 30% del ancho disponible */
+    padding: 10px;
+    justify-items: center; /* Centrar horizontalmente las celdas */
+    align-items: center; /* Centrar verticalmente las celdas */
+}
+
+/* Estilos para cada celda (letras y números) */
+p {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 600ms;
-    background-color: cornflowerblue;
-    height: 100px;
-    width: 100px;
-    font-size: 45px;
+    background-color: orange; /* Color predeterminado */
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px darkorange;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover: Cambios al pasar el cursor */
+p:hover {
+    transform: scale(1.1);
+    background-color: yellowgreen;
     color: black;
-    margin: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 0 10px lightgreen;
-  }
+    box-shadow: 0 0 10px lightgreen;
+    cursor: pointer;
+}
 
-  p:hover {
-    background-color: aquamarine;
-    color: darkviolet;
-    cursor: crosshair;
-    width: 150px;
-    box-shadow: 0 0 0 5px skyblue;
-    background: radial-gradient(
-        circle at 50% 0,
-        rgba(255, 0, 0, 0.5),
-        rgba(255, 0, 0, 0) 70.71%
-      ),
-      radial-gradient(
-        circle at 6.7% 75%,
-        rgba(0, 0, 255, 0.5),
-        rgba(0, 0, 255, 0) 70.71%
-      ),
-      radial-gradient(
-          circle at 93.3% 75%,
-          rgba(0, 255, 0, 0.5),
-          rgba(0, 255, 0, 0) 70.71%
-        )
-        beige;
-  }
+/* Estilos para pares e impares */
+.par {
+    background-color: green;
+}
 
-  .par {
-    background-color: gold;
-  }
-
-  .impar {
-    background-color: coral;
-  }
+.impar {
+    background-color: orange;
+}

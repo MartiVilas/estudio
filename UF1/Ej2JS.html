@@ -70,26 +70,51 @@
     </div>
 
     <script>
-      let numUsuario = prompt("Dime un valor inicial entre 1 i 30:");
-      if (numUsuario>30){
-        alert("El numero no puede ser mayor a 30!")
-      }
-      let div = document.getElementById("contenedor");
+      function crearCuadros(numUsuario) {
+        let div = document.getElementById("contenedor");
+        div.innerHTML = ""; 
 
-      for (let num = 1; num <= numUsuario.valueOf(numUsuario); num++) {
-        let cuadro = document.createElement("p");
-        console.log(num % 2);
-        let numero = document.createTextNode(num);
-        if (num % 2 == 0) {
-          cuadro.setAttribute("class", "par");
+        for (let num = 1; num <= numUsuario; num++) {
+          let cuadro = document.createElement("p");
+          let numero = document.createTextNode(num);
+
+         
+          if (num % 2 === 0) {
+            cuadro.setAttribute("class", "par");
+          } else {
+            cuadro.setAttribute("class", "impar");
+          }
+
+          if (num % 3 === 0) {
+            cuadro.classList.add("multiplo");
+          }
+
+          cuadro.appendChild(numero);
+          div.appendChild(cuadro);
+        }
+      }
+
+      
+      let numUsuario = parseInt(prompt("Dime un valor inicial entre 1 y 30:"));
+
+      if (isNaN(numUsuario) || numUsuario < 1 || numUsuario > 30) {
+        alert("El número debe estar entre 1 y 30.");
+        let respuesta = prompt(
+          "¿Quieres intentarlo de nuevo? (si o no)"
+        ).toLowerCase();
+
+        if (respuesta === "si") {
+          numUsuario = parseInt(prompt("Dime un valor inicial entre 1 y 30:"));
+          if (!isNaN(numUsuario) && numUsuario >= 1 && numUsuario <= 30) {
+            crearCuadros(numUsuario);
+          } else {
+            alert("Número inválido nuevamente. Adiós!");
+          }
         } else {
-          cuadro.setAttribute("class", "impar");
+          alert("De acuerdo, adiós!");
         }
-        if (num % 3 == 0) {
-          cuadro.setAttribute("class", "multiplo");
-        }
-        cuadro.appendChild(numero);
-        div.appendChild(cuadro);
+      } else {
+        crearCuadros(numUsuario); 
       }
     </script>
   </body>
