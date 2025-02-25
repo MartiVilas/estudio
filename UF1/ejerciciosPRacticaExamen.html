@@ -19,7 +19,7 @@
         let numUser;
         do {
           numUser = prompt("Dime tu número");
-        } while (isNaN(numUser)); // Corregir la condición para verificar si numUser es NaN
+        } while (!isNaN(numUser)); // Corregir la condición para verificar si numUser es NaN
         return numUser;
       }
 
