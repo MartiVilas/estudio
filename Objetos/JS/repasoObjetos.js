@@ -49,7 +49,7 @@ function añadirAlDom(id, resultado) {
     container.appendChild(p);
     p.textContent = resultado;
     p.setAttribute('class', 'result');
-}
+} 
 
 function comprobarTipo(array){
    return array.every(elemento => typeof(elemento)=='string') ? "Son todos string":"No son todos string";
