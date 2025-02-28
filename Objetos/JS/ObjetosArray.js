@@ -1,15 +1,6 @@
-const diasSemana = [
-  "Lunes",
-  "Martes",
-  "Miércoles",
-  "Jueves",
-  "Viernes",
-  "Sábado",
-  "Domingo",
-];
+const diasSemana = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
 
 /*Hacer ejercicios find, some etc*/
-
 function añadirAlDom(id, resultado) {
   const container = document.getElementById(id);
   let p = document.createElement("p");
@@ -86,11 +77,11 @@ function ordenarPorPreciosCoches(array) {
 // 2do return: Dentro del map devuelve el array cambiado para cada coche.
 
 function rebajaPrecio(array) {
-  return array.map((coches) => {
-    coches[3] = coches[3] * 0.8;
-    return coches;
-  });
-}
+    return array.map((coches) => {
+      coches[3] = coches[3] * 0.8;
+      return coches;
+    });
+  }
 
 function init() {
   ex1Map();

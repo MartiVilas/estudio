@@ -1,4 +1,5 @@
 function init(){
+
     añadirAlDom("todos1",comprobarTipo(arrayStrings));
     añadirAlDom("todos2",comprobarTipoPares(arrayMixto));
 
@@ -82,7 +83,6 @@ function arrayZ(array){
 function multiplos5(array){
     return array.filter(elemento => elemento%5==0).join(" - ");
 }
-
 
 function primeroA5(array){
     return array.find(elemento => elemento.length>5);
