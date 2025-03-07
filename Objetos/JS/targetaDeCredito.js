@@ -1,4 +1,5 @@
 class targetaDeCredito{
+    
     //Propiedades solo poner las privadas y las que no quieres que esten en el constructor
     #cvv = '123';
 
