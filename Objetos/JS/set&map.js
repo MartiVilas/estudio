@@ -20,6 +20,3 @@ function init(){
     let repes = borrarRepetidos(array)
     console.log(repes)
 }
-
-5123
-0.
