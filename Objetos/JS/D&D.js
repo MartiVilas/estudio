@@ -13,6 +13,16 @@ class Persona {
         prompt("El personaje ha atacado.")
     }
 
+    toString(){
+        console.log("To String");
+        return this.nombre;
+    }
+
+    valueOf(){
+        console.log("Value Of");
+        return this.nivel
+    }
+
 }
 
 class Guerrero extends Persona{
@@ -58,16 +68,27 @@ class Mago extends Persona{
 }
 
 function init(){
-    let persona = new Persona("Marti",89,100);
-    console.log(persona);
+    // Crear array de personajes
+    const listaPersonajes = [
+        new Guerrero("Thorgar", 10, 150, 20, 10),
+        new Guerrero("Ragnar", 12, 170, 25, 15),
+        new Guerrero("Baldur", 8, 140, 18, 12),
+        new Mago("Merlin", 15, 100, 30, 200),
+        new Mago("Gandalf", 18, 120, 35, 250),
+        new Mago("Morgana", 14, 110, 28, 180)
+    ];
+    
+    //Ordenar por nombre con el toString()
+    let personajesOrdenados = listaPersonajes.sort();
+    console.log("Personajes ordenados por nombre");
+    console.log(personajesOrdenados);
 
-    let guerrero = new Guerrero("Ulises",12,150,50,75);
-    console.log(guerrero);
-    console.log(guerrero.atacar(120));
-    console.log(guerrero.recibirDaño(120));
+    //Ordenador por nivel con el ValueOf()
+    let personajesOrdenadosPorLvl = listaPersonajes.sort((a,b) => b - a);
+    console.log("Personajes ordenador por lvl");
+    console.log(personajesOrdenadosPorLvl)
 
-    let mago = new Mago("Carlos",345,400,80,1500);
-    console.log(mago);
-    console.log(mago.lanzarHechizo(200,mago.inteligencia,150));
+    //Imprimir nombres
+    console.log(`El nombre de los personajes es: ${listaPersonajes.join(", ")}`)
 }
 
